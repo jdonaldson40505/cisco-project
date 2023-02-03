@@ -2,9 +2,32 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Site_Container {
+  background-color: #f0f4f5;
+  padding: 15px;
+  border-radius: 1cm;
+}
+
+.Nav_Items {
+  display:inline;
+  list-style-type: none;
+  overflow:hidden;
+}
+
+.Nav_Item {
+  outline: none;
+  background: transparent;
+  border: 0;
+}
+
+.Nav_Item:focus {
+  background-color: #0c2b4b;
+  color: #f0f4f5;
+}
+
+.Nav_Item:hover {
+  background-color: #0c2b4b;
+  color: #f0f4f5;
 }
 
 @media (prefers-reduced-motion: no-preference) {

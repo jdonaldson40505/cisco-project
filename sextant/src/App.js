@@ -1,25 +1,42 @@
-import logo from './logo.svg';
+
+import React from 'react';
 import './App.css';
 
-function App() {
+
+function DisplayContents(site){
+  switch(site) {
+    case 'Home':
+      break;
+      default:
+        break;
+      
+  }
+}
+function NavBar(props) {
+  return (<button className='Nav_Item' value={props.name} onClick={val => DisplayContents(val.target.value)}>{props.name}</button>
+  );
+}
+
+
+
+function App(pages) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='Site_Container'>
+      <header className='Banner'>
+        <h1 className='Site_Name'>Sextant</h1>
       </header>
+      <hr className='Header_Break'></hr>
+      <div className='NavBar'>
+        <ul className='Nav_Items'>
+          <NavBar name='Home'/> 
+          <NavBar name="About Us"/>
+        </ul>
+      </div>
+      <div className='BodyContainer' id='BodyContainer'>
+      </div>
     </div>
   );
 }
+
 
 export default App;
