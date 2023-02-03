@@ -2,7 +2,9 @@
 import React from 'react';
 import './App.css';
 
-
+// Todo: create seperate pages to navigate to.
+// This would be for switching pages if necessary
+/* 
 function DisplayContents(site){
   switch(site) {
     case 'Home':
@@ -12,8 +14,20 @@ function DisplayContents(site){
       
   }
 }
+
+
+onClick={val => DisplayContents(val.target.value)}
+*/
 function NavBar(props) {
-  return (<button className='Nav_Item' value={props.name} onClick={val => DisplayContents(val.target.value)}>{props.name}</button>
+  return (<button className='Nav_Item' value={props.name} >{props.name}</button>
+  );
+}
+
+function AddCard(props){
+  return (
+  <div className='Card_Container'>
+    {props.children};
+  </div>
   );
 }
 
@@ -32,8 +46,10 @@ function App(pages) {
           <NavBar name="About Us"/>
         </ul>
       </div>
-      <div className='BodyContainer' id='BodyContainer'>
-      </div>
+      <AddCard className="Cards">
+        <p>placeholder for testing remove when ready to populate feild</p>  
+      </AddCard> 
+
     </div>
   );
 }
